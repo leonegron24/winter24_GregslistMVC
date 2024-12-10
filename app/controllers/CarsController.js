@@ -13,8 +13,11 @@ export class CarsController {
   drawCars() {
     console.log('✏️🚙🚙');
     const carsListingsElm = document.getElementById('car-listings')
+    if (!carsListingsElm){
+      return
+    }
     carsListingsElm.innerHTML = ''
-    AppState.cars.forEach(car => carsListingsElm.innerHTML += car.Card)
+    AppState.cars.forEach(car => carsListingsElm.innerHTML += car.carCard)
   }
 
   createCarListing() {
@@ -23,6 +26,9 @@ export class CarsController {
     console.log('Creating a Car', formElm);
     console.log(formElm.make.value);
     // NOTE collect all the data from the form!
+    if (!formElm){
+      return
+    }
     const formData = {
       make: formElm.make.value,
       model: formElm.model.value,

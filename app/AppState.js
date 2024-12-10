@@ -34,15 +34,17 @@ class ObservableAppState extends EventEmitter {
   houses = [
     new House({
       year: '2009',
+      name: 'Modern Home',
       bedrooms: 3,
       bathrooms: 2.5,
       sqft: 1400,
       price: 1000000,
       description:'Newly renovated mid-century modern home',
-      imgUrl:'https://rew-feed-images.global.ssl.fastly.net/imls/_cloud_media/property/residentialincome/98862307-1-835976ecc96808a93ea194115ae6c537-m.jpg'
+      imgUrl:'https://images.unsplash.com/photo-1544984243-ec57ea16fe25?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8bW9kZXJuJTIwaG9tZXxlbnwwfHwwfHx8MA%3D%3D'
     }),
     new House({
       year: '2020',
+      name: 'Bright Home',
       bedrooms: 2,
       bathrooms: 1,
       sqft: 5000,
@@ -52,6 +54,7 @@ class ObservableAppState extends EventEmitter {
     }),
     new House({
       year: '1959',
+      name: 'Old Home',
       bedrooms: 1,
       bathrooms: 1,
       sqft: 3000,
@@ -61,6 +64,7 @@ class ObservableAppState extends EventEmitter {
     }),
     new House({
       year: '1885',
+      name: 'Rotten Home',
       bedrooms: 4,
       bathrooms: 6,
       sqft: 2800,

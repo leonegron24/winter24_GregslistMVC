@@ -29,7 +29,7 @@ export class Car {
   }
 
 
-  get Card() {
+  get carCard() {
     return `
          <div class="col-md-4">
          <div class="card shadow-sm">

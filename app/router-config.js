@@ -21,9 +21,9 @@ export const router = new Router([
     path: '#/about',
     view: 'app/views/AboutView.html'
   },
-  {
-    path: '#/houses', // Define the new route for Houses
-    controllers: [HousesController], // Attach the HousesController
-    view: 'app/views/HousesView.html' // Link to a separate HTML file for the Houses page
-  }
+  // {
+  //   path: '#/houses', // Define the new route for Houses
+  //   controllers: [HousesController], // Attach the HousesController
+  //   view: 'app/views/HousesView.html' // Link to a separate HTML file for the Houses page
+  // }
 ]);

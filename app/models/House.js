@@ -28,4 +28,37 @@ export class House {
         this.description = data.description
         this.imgUrl = data.imgUrl
     }
+
+    get houseCard() {
+        return `
+             <div class="col-md-4">
+             <div class="card shadow-sm">
+               <img class= house p-2"
+                 src="${this.imgUrl}"
+                 alt="">
+               <div class="card-body">
+                 <p class="text-center fw-bold">
+                   ${this.year} ${this.name}
+                 </p>
+                 <p class="mb-0">
+                   Bedrooms: ${this.bedrooms}
+                 </p>
+                 <p class="mb-0">
+                   Bathrooms: ${this.bathrooms}
+                 </p>
+                 <p class="mb-0">
+                   Sqft: ${this.sqft}
+                 </p>
+                 <p class="mb-0">
+                   ${this.description}
+                 </p>
+                 <div>
+                  <button onclick="app.CarsController.deleteCarListing('${this.id}')" class="btn btn-danger w-100" title="Delete ${this.make} ${this.model}"><i class="mdi mdi-delete-empty"></i></button>
+                 </div>
+               </div>
+             </div>
+           </div>
+        `
+      }
+    
 }

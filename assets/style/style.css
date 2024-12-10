@@ -3,5 +3,19 @@
 
 .card-img {
   height: 150px;
-  object-fit: cover;
+  object-fit: cover
+}
+
+.d-none {
+  display: none !important;
+}
+
+.active {
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+.house{
+  height: 300px;
+  object-fit: cover
 }
