@@ -24,6 +24,14 @@ export function toggleView(viewId) {
       carForm.classList.remove('d-none');
     }
   }
+
+  // Special case: Show the house form only on the House page
+  if (viewId === 'houses-list'){
+    const houseForm = document.getElementById('house-form');
+    if (houseForm){
+      houseForm.classList.remove('d-none')
+    }
+  }
 }
 
 

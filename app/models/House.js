@@ -18,15 +18,16 @@ export class House {
 
 
     constructor(data) {
-        this.id = data.id || generateId
+        this.id = generateId()
         this.year = data.year
         this.name = data.name
         this.bedrooms = data.bedrooms
         this.bathrooms = data.bathrooms
         this.sqft = data.sqft
         this.price = data.price
-        this.description = data.description
+        this.description = data.description || "No description given"
         this.imgUrl = data.imgUrl
+        this.listedAt = data.listedAt == undefined ? new Date() : new Date(data.listedAt)
     }
 
     get houseCard() {
@@ -40,6 +41,12 @@ export class House {
                  <p class="text-center fw-bold">
                    ${this.year} ${this.name}
                  </p>
+                 <p class="text-center fw-bold">
+                   $${this.price}
+                 </p>
+                 <p class="mb- text-center">
+                   ${this.description}
+                 </p>
                  <p class="mb-0">
                    Bedrooms: ${this.bedrooms}
                  </p>
@@ -49,16 +56,22 @@ export class House {
                  <p class="mb-0">
                    Sqft: ${this.sqft}
                  </p>
-                 <p class="mb-0">
-                   ${this.description}
+                 <p class="mb-2">
+                   ${this.FormattedTime}
                  </p>
-                 <div>
-                  <button onclick="app.CarsController.deleteCarListing('${this.id}')" class="btn btn-danger w-100" title="Delete ${this.make} ${this.model}"><i class="mdi mdi-delete-empty"></i></button>
-                 </div>
+                 <div class='row justify-content-end'>
+                  <div class='col-3'>
+                    <button onclick="app.HouseController.deleteHouseListing('${this.id}')" class="btn btn-danger w-100" title="Delete ${this.name}"><i class="mdi mdi-delete-empty"></i></button>
+                  </div>
+                 </div> 
                </div>
              </div>
            </div>
         `
+      }
+
+      get FormattedTime() {
+        return this.listedAt.toLocaleDateString('en-us', { weekday: 'short', year: 'numeric', month: 'numeric', day: 'numeric'})
       }
     
 }

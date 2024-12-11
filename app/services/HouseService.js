@@ -9,7 +9,7 @@ class HouseService{
         const createdHouseCard = new House(houseData)
         AppState.houses.push(createdHouseCard)
         console.log('AppState houses', AppState.houses);
-        this.saveHouses() // as i add cars, save to localStorage
+        this.saveHouses() // as i add homes, save to localStorage
       }
     
       deleteHouseListing(houseId) {
@@ -24,6 +24,7 @@ class HouseService{
     
     
       saveHouses() {
+        console.log("saving changes to house list")
         let houseStringData = JSON.stringify(AppState.houses)
         localStorage.setItem('gregslist_houses', houseStringData)
       }
@@ -42,3 +43,4 @@ class HouseService{
         AppState.houses = houses // overwrite the data in the AppState, with the data from localStorage
       }
 }
+export const houseService = new HouseService()

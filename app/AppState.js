@@ -38,7 +38,7 @@ class ObservableAppState extends EventEmitter {
       bedrooms: 3,
       bathrooms: 2.5,
       sqft: 1400,
-      price: 1000000,
+      price: '1,000,000',
       description:'Newly renovated mid-century modern home',
       imgUrl:'https://images.unsplash.com/photo-1544984243-ec57ea16fe25?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8bW9kZXJuJTIwaG9tZXxlbnwwfHwwfHx8MA%3D%3D'
     }),
@@ -48,8 +48,8 @@ class ObservableAppState extends EventEmitter {
       bedrooms: 2,
       bathrooms: 1,
       sqft: 5000,
-      price: 500000,
-      description:'Even newr, very shiny looking home',
+      price: '500,000',
+      description:'Brand new, very shiny looking home',
       imgUrl:'https://images.unsplash.com/photo-1480074568708-e7b720bb3f09?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8aG91c2V8ZW58MHx8MHx8fDA%3D'
     }),
     new House({
@@ -58,7 +58,7 @@ class ObservableAppState extends EventEmitter {
       bedrooms: 1,
       bathrooms: 1,
       sqft: 3000,
-      price: 450000,
+      price: '450,000',
       description:'Old home, perfect for old people',
       imgUrl:'https://images.unsplash.com/photo-1464146072230-91cabc968266?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8aG91c2V8ZW58MHx8MHx8fDA%3D'
     }),
@@ -68,7 +68,7 @@ class ObservableAppState extends EventEmitter {
       bedrooms: 4,
       bathrooms: 6,
       sqft: 2800,
-      price: 45000,
+      price: '45,000',
       description:'Insanely old home, please buy it?',
       imgUrl:'https://images.unsplash.com/photo-1452626212852-811d58933cae?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8aG91c2V8ZW58MHx8MHx8fDA%3D'
     })

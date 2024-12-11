@@ -1,4 +1,5 @@
 import { AppState } from "../AppState.js";
+import { houseService } from "../services/HouseService.js";
 
 export class HousesController {
     constructor() {
@@ -33,7 +34,7 @@ export class HousesController {
         imgUrl: formHouseElm.imgUrl.value
       }
       console.log(formHouseData); // check to see if it's all there
-      HouseService.createHouseListing(formHouseData)
+      houseService.createHouseListing(formHouseData)
       this.drawHouses()
     }
   
@@ -46,8 +47,8 @@ export class HousesController {
       const typingChallange = prompt('Please type "Hell Yeah" to confirm this action')
       if (typingChallange != 'Hell Yeah') return
   
-      carsService.deleteCarListing(carId)
-      this.drawCars()
+      houseService.deleteHouseListing(houseId)
+      this.drawHouses()
     }
   }
   

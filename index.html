@@ -45,6 +45,47 @@
   <!-- SECTION -->
   <main class="container">
 
+<!-- SECTION house form! -->
+ <form id="house-form" onsubmit="app.HouseController.createHouseListing()" class="row g-4 bg-white p-4 rounded shadow-sm my-3">
+  <div>
+    <h2> List Your Home! </h2>
+  </div>
+  <div class="col-md-4">
+    <label for="house-year">Year</label>
+    <input type="number" name="year" id="house-year" min="1600" max="2025" class="form-control">
+  </div>
+  <div class="col-md-4">
+    <label for="house-name">Name</label>
+    <input type="text" name="name" id="house-name" maxlength="40" class="form-control">
+  </div>
+  <div class="col-md-4">
+    <label for="house-price">Price</label>
+    <input type="number" name="price" id="house-price" min="1000" max="100000000" class="form-control">
+  </div>
+  <div>
+    <label for="house-description">Description</label>
+    <input type="text" name="description" id="house-description" maxlength="200" minlength="10" class="form-control">
+  </div>
+  <div class="col-md-3">
+    <label for="bedroom"># of Bedrooms</label>
+    <input type="number" name="bedrooms" id="bedrooms" min="1" max="20" class="form-control">
+  </div>
+  <div class="col-md-3">
+    <label for="bathroom"># of Bathrooms</label>
+    <input type="number" name="bathrooms" id="bathrooms" min="1" max="20" class="form-control">
+  </div>
+  <div class="col-md-3">
+    <label for="Sqft">Square Feet of Home</label>
+    <input type="number" name="sqft" id="sqft" min="50" max="1000000" class="form-control">
+  </div>
+  <div class="col-md-6">
+    <label for="house-imgUrl">Picture</label>
+    <input required id="house-imgUrl" name="imgUrl" type="url" class="form-control">
+  </div>
+  <div class="text-end">
+    <button class="btn btn-primary" type="submit">Submit</button>
+  </div>
+ </form>
 <section id="houses-list" class="d-none row"></section>
     <!-- SECTION if you are adding houses, add them here -->
 
