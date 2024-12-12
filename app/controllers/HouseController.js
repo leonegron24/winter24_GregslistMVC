@@ -4,6 +4,7 @@ import { houseService } from "../services/HouseService.js";
 export class HousesController {
     constructor() {
       console.log('HousesController loaded');
+      houseService.loadHouse()
       this.drawHouses();
     }
   
@@ -46,8 +47,9 @@ export class HousesController {
       if (!areYourSureSure) return
       const typingChallange = prompt('Please type "Hell Yeah" to confirm this action')
       if (typingChallange != 'Hell Yeah') return
-  
+      console.log('App State House Before Delete', AppState.houses)
       houseService.deleteHouseListing(houseId)
+      console.log('App State House After Delete', AppState.houses)
       this.drawHouses()
     }
   }

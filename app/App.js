@@ -41,7 +41,7 @@ window.toggleView = toggleView
 
 class App {
 
-  HomeController = new HomeController()
+  // HomeController = new HomeController()
   CarsController = new CarsController()
   HouseController = new HousesController()
 

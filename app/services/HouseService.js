@@ -18,7 +18,7 @@ class HouseService{
         console.log('🔥🏠', houseToDelete);
         // const indexToRemove = AppState.cars.findIndex(car => car.id == carId)
         const houseIndexToRemove = AppState.houses.indexOf(houseToDelete)
-        AppState.cars.splice(houseIndexToRemove, 1)
+        AppState.houses.splice(houseIndexToRemove, 1)
         this.saveHouses()
       }
     
@@ -38,7 +38,7 @@ class HouseService{
         console.log('🏠🏠💾', houseData);
         if (!houseData) return // don't map over nothing, if the app has no storage
         // if (carsData == null) return // don't map over nothing, if the app has no storage
-        const houses = houseData.map(houseData => new House(houseData))
+        const houses = houseData.map(housesData => new House(housesData))
         console.log('✨🏠🏠', houses);
         AppState.houses = houses // overwrite the data in the AppState, with the data from localStorage
       }
