@@ -18,7 +18,7 @@ class HouseService{
         console.log('🔥🏠', houseToDelete);
         // const indexToRemove = AppState.cars.findIndex(car => car.id == carId)
         const houseIndexToRemove = AppState.houses.indexOf(houseToDelete)
-        AppState.houses.splice(houseIndexToRemove, 1)
+        AppState.house.splice(houseIndexToRemove, 1)
         this.saveHouses()
       }
     

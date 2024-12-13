@@ -54,7 +54,7 @@ class App {
   
 }
 
-
+toggleView('car-listings')
 
 
 const app = new App()

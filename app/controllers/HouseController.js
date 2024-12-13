@@ -47,7 +47,7 @@ export class HousesController {
       if (!areYourSureSure) return
       const typingChallange = prompt('Please type "Hell Yeah" to confirm this action')
       if (typingChallange != 'Hell Yeah') return
-      console.log('App State House Before Delete', AppState.houses)
+      debugger
       houseService.deleteHouseListing(houseId)
       console.log('App State House After Delete', AppState.houses)
       this.drawHouses()
